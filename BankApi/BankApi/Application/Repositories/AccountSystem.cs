@@ -21,7 +21,7 @@ public class AccountSystem : IAccountSystem
 
     public Account CreateNewAccount(CustomerAccount request)
     {
-        var customers = _customerSystem.read(request.CustomerId);
+        var customers = _customerSystem.readCustomerFromJsonFile(request.CustomerId);
         var customer = customers.First(x => x.CustomerId == request.CustomerId);
         var AccountId = GenerateNewAccountId(customer);      
         var AccountNumber = GenerateNewAccountNumber(customer);

@@ -19,6 +19,11 @@ public class AccountSystem : IAccountSystem
         FilesDirectory = Directory.GetCurrentDirectory() + filesDirectory;
     }
 
+    /// <summary>
+    /// Creats a new account of an exsit customer.
+    /// </summary>
+    /// <param name="request">An object to hold the required data to create new account.</param>
+    /// <returns>A account object.</returns>
     public Account CreateNewAccount(CustomerAccount request)
     {
         var customers = _customerSystem.readCustomerFromJsonFile(request.CustomerId);
@@ -46,16 +51,27 @@ public class AccountSystem : IAccountSystem
         return GetLastCreatedAccount(customer);
     }
 
+    /// <summary>
+    /// Generate a new account number.
+    /// </summary>
+    /// <returns>A new account number.</returns>
     private long GenerateNewAccountNumber(Customer customer)
     {
         return ++GetLastCreatedAccount(customer).AccountNumber;
     }
 
+    /// <summary>
+    /// Generate a new account Id.
+    /// </summary>
+    /// <returns>A new account Id.</returns>
     private long GenerateNewAccountId(Customer customer)
     {
         return ++GetLastCreatedAccount(customer).AccountId;
     }
-
+    /// <summary>
+    /// Get last Created account.
+    /// </summary>
+    /// <returns>A last created account.</returns>
     private Account GetLastCreatedAccount(Customer customer)
     {
         return customer.Accounts.Last();

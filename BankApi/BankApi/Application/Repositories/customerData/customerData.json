@@ -27,17 +27,10 @@
         ]
       },
       {
-        "AccountId": 3,
+        "AccountId": 2,
         "AccountNumber": 12000164,
         "Balance": 0.0,
         "CreationDate": "2023-02-09T09:56:04.5950892+02:00",
-        "Transactions": null
-      },
-      {
-        "AccountId": 3,
-        "AccountNumber": 12000164,
-        "Balance": 0.0,
-        "CreationDate": "2023-02-09T09:56:04.5950984+02:00",
         "Transactions": []
       }
     ]
@@ -74,7 +67,7 @@
         "AccountNumber": 12000167,
         "Balance": 200.0,
         "CreationDate": "2023-02-09T09:56:04.5950906+02:00",
-        "Transactions": null
+        "Transactions": []
       }
     ]
   }

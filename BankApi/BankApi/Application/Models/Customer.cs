@@ -1,7 +1,6 @@
 using BankApi.Repositories;
 
 namespace BankApi.Models;
-[Serializable]
 
 public class Customer
 {

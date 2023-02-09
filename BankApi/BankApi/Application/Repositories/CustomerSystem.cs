@@ -37,15 +37,13 @@ public class CustomerSystem : ICustomerSystem
 
     }
 
-    public List<Customer> read(long customerId)
+    public Customer readCustomerFromJsonFile(long customerId)
     {
         string JsonFile = "customerData.json";
-        List<Customer> customers;
-
         string json = File.ReadAllText($"{FilesDirectory}/{JsonFile}");
-        customers = JsonConvert.DeserializeObject<List<Customer>>(json);
-        List<Customer> newOne = customers;
-        return newOne;
+        List<Customer> customers = JsonConvert.DeserializeObject<List<Customer>>(json);
+        var customer= allCustomer.FirstOrDefault(x=>x.CustomerId == customerId);
+        return customer;
 
     }
     

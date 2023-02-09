@@ -5,7 +5,6 @@ using System.Text.Json.Serialization;
 
 namespace BankApi.Models;
 
-[DataContract]
 public class CustomerAccount
 {
     /// <summary>
@@ -14,7 +13,10 @@ public class CustomerAccount
     /// <example>"1"</example>
     [Required(ErrorMessage = "The customer account Id is required")]
     public long CustomerId { get; set; }
-
+    /// <summary>
+    /// Initial amount to open new account.
+    /// </summary>
+    /// <example>"0.00"</example>
     [Required(ErrorMessage = "The initial credit is required")]
     public double InitialCredit { get; set; }
 }

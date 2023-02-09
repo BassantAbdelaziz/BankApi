@@ -16,7 +16,12 @@ public class CustomerSystem : ICustomerSystem
         FilesDirectory = Directory.GetCurrentDirectory() + filesDirectory;
 
     }
-
+    
+    /// <summary>
+    /// Gets customer by it's Id.
+    /// </summary>
+    /// <param name="customerId">A customer Id.</param>
+    /// <returns>A customer object.</returns>
     public Customer GetCustomerById(long customerId)
     {
         try
@@ -36,7 +41,12 @@ public class CustomerSystem : ICustomerSystem
        
 
     }
-
+    
+    /// <summary>
+    /// Reads all customer from json file by it's Id.
+    /// </summary>
+    /// <param name="customerId">A customer Id.</param>
+    /// <returns>A customer object.</returns>
     public Customer readCustomerFromJsonFile(long customerId)
     {
         string JsonFile = "customerData.json";
@@ -47,7 +57,10 @@ public class CustomerSystem : ICustomerSystem
 
     }
     
-
+    /// <summary>
+    /// Create list to hold all customer data.
+    /// </summary>
+    /// <returns>A list of all customer objects.</returns>
     private static List<Customer> CustomersData()
     {
         return new List<Customer>()

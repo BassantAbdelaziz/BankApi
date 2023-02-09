@@ -9,11 +9,14 @@ public class AccountSystem : IAccountSystem
 {
     private readonly ICustomerSystem _customerSystem;
     private readonly ITransactionSystem _transactionSystem;
+    protected readonly string FilesDirectory;
 
-    public AccountSystem(ICustomerSystem customerSystem, ITransactionSystem transactionSystem)
+
+    public AccountSystem(ICustomerSystem customerSystem, ITransactionSystem transactionSystem, string filesDirectory = "/Application/Repositories/customerData/")
     {
         _customerSystem = customerSystem;
         _transactionSystem = transactionSystem;
+        FilesDirectory = Directory.GetCurrentDirectory() + filesDirectory;
     }
 
     public Account CreateNewAccount(CustomerAccount request)
@@ -34,13 +37,10 @@ public class AccountSystem : IAccountSystem
                 : new List<Transaction>()
         });
 
-        List<Customer> newList = customers.ToList();
-
-        string json = JsonConvert.SerializeObject(newList, Formatting.Indented);
-
-        // Write the entire JSON string to the file, replacing any existing content
+        string json = JsonConvert.SerializeObject(customers, Formatting.Indented);
+        string JsonFile = "customerData.json";
         File.WriteAllText(
-            "/home/bassant/RiderProjects/BankApi/BankApi/Application/Repositories/customerData/customerData.json",
+            $"{FilesDirectory}/{JsonFile}",
             json);
 
         return GetLastCreatedAccount(customer);

@@ -1,0 +1,72 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/bassant/RiderProjects/CustomerApi/CustomerApi/CustomerApi.csproj": {}
+  },
+  "projects": {
+    "/home/bassant/RiderProjects/CustomerApi/CustomerApi/CustomerApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/bassant/RiderProjects/CustomerApi/CustomerApi/CustomerApi.csproj",
+        "projectName": "CustomerApi",
+        "projectPath": "/home/bassant/RiderProjects/CustomerApi/CustomerApi/CustomerApi.csproj",
+        "packagesPath": "/home/bassant/.nuget/packages/",
+        "outputPath": "/home/bassant/RiderProjects/CustomerApi/CustomerApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/bassant/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexus.dowhile.se/repository/nuget": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/bassant/.dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

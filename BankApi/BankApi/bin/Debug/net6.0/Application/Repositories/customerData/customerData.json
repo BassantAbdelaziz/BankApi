@@ -1,0 +1,81 @@
+[
+  {
+    "CustomerId": 1,
+    "Name": "Ali",
+    "Surname": null,
+    "Accounts": [
+      {
+        "AccountId": 1,
+        "AccountNumber": 12000162,
+        "Balance": 300.0,
+        "CreationDate": "2023-02-09T09:53:15.3119086+02:00",
+        "Transactions": [
+          {
+            "TransactionId": 1,
+            "TransactionDateTime": "2023-02-09T09:53:15.3126908+02:00",
+            "TransactionAccountNumber": 12000162,
+            "AmountAdded": 50.0,
+            "AmountDeducted": 0.0
+          },
+          {
+            "TransactionId": 1,
+            "TransactionDateTime": "2023-02-09T09:53:15.3132216+02:00",
+            "TransactionAccountNumber": 12000162,
+            "AmountAdded": 0.0,
+            "AmountDeducted": 10.0
+          }
+        ]
+      },
+      {
+        "AccountId": 3,
+        "AccountNumber": 12000164,
+        "Balance": 0.0,
+        "CreationDate": "2023-02-09T09:53:15.3134175+02:00",
+        "Transactions": null
+      },
+      {
+        "AccountId": 3,
+        "AccountNumber": 12000164,
+        "Balance": 0.0,
+        "CreationDate": "2023-02-09T09:53:15.3168876+02:00",
+        "Transactions": []
+      }
+    ]
+  },
+  {
+    "CustomerId": 2,
+    "Name": "Sara",
+    "Surname": null,
+    "Accounts": [
+      {
+        "AccountId": 3,
+        "AccountNumber": 12000166,
+        "Balance": 300.0,
+        "CreationDate": "2023-02-09T09:53:15.3136026+02:00",
+        "Transactions": [
+          {
+            "TransactionId": 1,
+            "TransactionDateTime": "2023-02-09T09:53:15.3136037+02:00",
+            "TransactionAccountNumber": 12000162,
+            "AmountAdded": 50.0,
+            "AmountDeducted": 0.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "CustomerId": 3,
+    "Name": "Ahmed",
+    "Surname": null,
+    "Accounts": [
+      {
+        "AccountId": 4,
+        "AccountNumber": 12000167,
+        "Balance": 200.0,
+        "CreationDate": "2023-02-09T09:53:15.3136222+02:00",
+        "Transactions": null
+      }
+    ]
+  }
+]

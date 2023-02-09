@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Data</title>
+</head>
+<body>
+<h1>Customer Data</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody id="customer-data-table-body"></tbody>
+</table>
+
+<script>
+    // Add code to fetch the customer data from the API
+    fetch("/customer/GetCustomerAccount?customerAccountId=" + customerAccountId)
+        .then(response => response.json())
+        .then(customerData => {
+            // Render the customer data in the table
+            const customerDataTableBody = document.getElementById("customer-data-table-body");
+            customerDataTableBody.innerHTML = `
+            <tr>
+              <td>${customerData.CustomerId}</td>
+              <td>${customerData.Name}</td>
+              <td>${customerData.Email}</td>
+            </tr>
+          `;
+        })
+        .catch(error => console.error(error));
+</script>
+</body>
+</html>

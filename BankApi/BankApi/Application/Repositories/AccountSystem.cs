@@ -38,7 +38,7 @@ public class AccountSystem : IAccountSystem
             Balance = request.InitialCredit,
             CreationDate = DateTime.Now,
             Transactions = request.InitialCredit > 0
-                ? new List<Transaction> { _transactionSystem.HandleFirstTransaction(request.InitialCredit, AccountNumber) }
+                ? new List<Transaction> { _transactionSystem.CreateFirstTransaction(request.InitialCredit, AccountNumber) }
                 : new List<Transaction>()
         });
 

@@ -1,7 +1,6 @@
 # BankApi #
 
-BankApi enables to create/open new account for existing customer, and get all customer infromation about his accounts and transaction.
-
+BankApi enables to create/open new account for existing customer, and get all customer infromation about his accounts and transactions.
 Main parts that **BankApi** take care of are:
 
 - **Account:** Represents the account of the customer.
@@ -21,6 +20,6 @@ Main parts that **BankApi** take care of are:
 1. Redirects to Swagger.
 
 ### Main Database ###
-We have to trail:
+We have two trail:
 1. Inset customers data into list and read directly by `GetCustomerById` method.
 1. `CustomerData.json` insert data into json file, read json, convert to list then read by `readCustomerFromJsonFile` method.
